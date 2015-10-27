@@ -7,18 +7,11 @@ import javax.jws.soap.SOAPBinding.Style;
 
 @WebService
 @SOAPBinding(style = Style.RPC)
-public interface LightService131 {
+public interface ACService {
 
 	@WebMethod
 	String sayHello(String name);
-	
-	@WebMethod
-	void off();
 
 	@WebMethod
-	void on();
-
-	@WebMethod
-	void toggle();
-
+	void executeAC();
 }

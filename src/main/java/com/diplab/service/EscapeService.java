@@ -7,11 +7,30 @@ import javax.jws.soap.SOAPBinding.Style;
 
 @WebService
 @SOAPBinding(style = Style.RPC)
-public interface ACService131 {
+public interface EscapeService {
 
 	@WebMethod
-	String sayHello(String name);
+	double CO2ppm();
+
+	@WebMethod
+	void off();
+
+	@WebMethod
+	void on();
+
+	@WebMethod
+	void toggle();
 
 	@WebMethod
 	void executeAC();
+
+	@WebMethod
+	double readTemperature();
+
+	@WebMethod
+	void unlock();
+
+	@WebMethod
+	void lock();
+
 }

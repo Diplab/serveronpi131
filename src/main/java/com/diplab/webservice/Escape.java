@@ -2,16 +2,16 @@ package com.diplab.webservice;
 
 import javax.xml.ws.Endpoint;
 
-import com.diplab.serviceImp.HelloService131Impl;
+import com.diplab.serviceImp.EscapeServiceImpl;
 
 
 public class Escape {
 	
 	public static void main(String[] args) {
-		Endpoint.publish("http://0.0.0.0:9005/webservice/sayHello",
-				new HelloService131Impl());
+		Endpoint.publish("http://0.0.0.0:9005/webservice/Escape",
+				new EscapeServiceImpl());
 		
-		System.out.println("Escape_131");
+		System.out.println("open webservice131 Escape");
 
 	}
 

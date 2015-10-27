@@ -4,11 +4,11 @@ import javax.jws.WebService;
 import javax.xml.ws.Endpoint;
 
 import com.diplab.device.RpiTrunLightController;
-import com.diplab.service.LightService131;
+import com.diplab.service.LightService;
 
 
 @WebService(endpointInterface = "com.diplab.service.LightService131")
-public class LightService131Impl implements LightService131 {
+public class LightServiceImpl implements LightService {
 
 	@Override
 	public String sayHello(String name) {
@@ -19,7 +19,7 @@ public class LightService131Impl implements LightService131 {
 	public static void main(String[] args) {
 		System.out.println("Light");
 		Endpoint.publish("http://0.0.0.0:9006/webservice/sayLight",
-				new LightService131Impl());
+				new LightServiceImpl());
 	}
 
 

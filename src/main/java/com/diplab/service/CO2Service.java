@@ -7,24 +7,12 @@ import javax.jws.soap.SOAPBinding.Style;
 
 @WebService
 @SOAPBinding(style = Style.RPC)
-public interface HelloService131 {
+public interface CO2Service {
 
 	@WebMethod
 	String sayHello(String name);
 
 	@WebMethod
 	double CO2ppm();
-
-	@WebMethod
-	void off();
-
-	@WebMethod
-	void on();
-
-	@WebMethod
-	void toggle();
-
-	@WebMethod
-	void executeAC();
 
 }
