@@ -10,10 +10,12 @@ import com.diplab.service.ACService;
 import com.diplab.service.COService;
 import com.diplab.service.SmokeService;
 import com.diplab.service.SwitchService;
+import com.diplab.service.TemperatureService;
 import com.diplab.serviceImp.ACServiceImpl;
 import com.diplab.serviceImp.COServiceImpl;
 import com.diplab.serviceImp.SmokeServiceImpl;
 import com.diplab.serviceImp.SwitchServiceImpl;
+import com.diplab.serviceImp.TemperatureServiceImpl;
 import com.pi4j.io.gpio.PinState;
 
 @WebService
@@ -24,6 +26,7 @@ public class Device131 {
 	SmokeService smokeService = new SmokeServiceImpl();
 	SwitchService switchService = new SwitchServiceImpl();
 	ACService acService = new ACServiceImpl();
+	TemperatureService temperatureService = new TemperatureServiceImpl();
 
 	@WebMethod
 	public double COppm() {
@@ -58,6 +61,11 @@ public class Device131 {
 	@WebMethod
 	public void executeAC() {
 		acService.executeAC();
+	}
+	
+	@WebMethod
+	public double readTemperature() {
+		return temperatureService.readTemperature();
 	}
 
 	public static void main(String[] args) {
